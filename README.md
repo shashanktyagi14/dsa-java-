@@ -4,7 +4,7 @@ A structured, testable collection of data structures and algorithms implemented 
 
 ## Project status
 
-This repository is being built incrementally. Only solutions that have been implemented and checked belong in the completed sections. Problem-specific solutions should include the source/problem link and any assumptions in their file header or README.
+This repository is built incrementally. Only solutions that have been implemented and checked belong in the [algorithm index](docs/problem-index.md). Problem-specific solutions should include the source/problem link and any assumptions in their file header or README.
 
 ## Topics
 
@@ -45,20 +45,7 @@ mvn -q -DskipTests package
 ```text
 src/
   main/java/com/shashank/dsa/
-    arrays/
-    strings/
-    hashing/
-    linkedlist/
-    stack/
-    queue/
-    trees/
-    heaps/
-    graphs/
-    backtracking/
-    dp/
-    greedy/
-    bitmanipulation/
-    trie/
+    arrays/ strings/ linkedlist/ stack/ trees/ heaps/ graphs/ dp/
   test/java/com/shashank/dsa/
 docs/
   problem-index.md

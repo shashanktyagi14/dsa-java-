@@ -1,17 +1,26 @@
-# Problem and implementation index
+# Implemented algorithm index
 
-This index tracks implemented reference algorithms. It is intentionally not a list of planned or placeholder solutions.
+This index lists implementations that exist in source and have unit tests. A planned topic is not listed until it is implemented and checked.
 
-| Topic | Implementation | Complexity | Tests |
-|---|---|---|---|
-| Arrays | Two Sum | O(n) expected time, O(n) space | `ArrayAlgorithmsTest` |
-| Arrays | Maximum subarray sum (Kadane) | O(n) time, O(1) space | `ArrayAlgorithmsTest` |
-| Arrays | Prefix sums | O(n) time, O(n) space | `ArrayAlgorithmsTest` |
-| Binary search | Lower bound | O(log n) time, O(1) space | `BinarySearchTest` |
-| Binary search | First occurrence | O(log n) time, O(1) space | `BinarySearchTest` |
-| Sliding window | Maximum fixed-window sum | O(n) time, O(1) space | `SlidingWindowTest` |
-| Sliding window | Longest subarray with at most k distinct values | O(n) expected time, O(k) space | `SlidingWindowTest` |
-| Strings | Longest substring without repeating code points | O(n) expected time, O(n) space | `StringAlgorithmsTest` |
-| Strings | Alphanumeric palindrome | O(n) time, O(1) auxiliary space | `StringAlgorithmsTest` |
+| Topic | Algorithm | Complexity |
+|---|---|---|
+| Arrays | Two Sum | O(n) expected time, O(n) space |
+| Arrays | Kadane maximum subarray | O(n) time, O(1) space |
+| Arrays | Inclusive prefix sums | O(n) time, O(n) space |
+| Binary search | Lower bound | O(log n) time, O(1) space |
+| Binary search | First occurrence | O(log n) time, O(1) space |
+| Sliding window | Maximum fixed-window sum | O(n) time, O(1) space |
+| Sliding window | Longest subarray with at most k distinct values | O(n) expected time, O(k) space |
+| Strings | Longest substring without repeating code points | O(n) expected time, O(n) space |
+| Strings | Alphanumeric palindrome | O(n) time, O(1) auxiliary space |
+| Linked lists | Reverse list, cycle detection, middle node | O(n) time, O(1) space |
+| Graphs | Unweighted BFS distances | O(V + E) time, O(V) space |
+| Graphs | Deterministic Kahn topological sort | O((V + E) log V) time, O(V) space |
+| Graphs | Disjoint set union | Amortized O(alpha(n)) per operation |
+| Dynamic programming | Minimum coin change | O(amount × coin count) time |
+| Dynamic programming | LIS length | O(n log n) time, O(n) space |
+| Stack | Circular next-greater element | O(n) time, O(n) space |
+| Heaps | k-th largest element | O(n log k) time, O(k) space |
+| Trees | Maximum depth, level order, strict BST validation | O(n) time |
 
-To add a row, implement and test the algorithm first. Include a source URL when the implementation solves a named online-judge problem.
+Run `mvn test` to execute all tests.

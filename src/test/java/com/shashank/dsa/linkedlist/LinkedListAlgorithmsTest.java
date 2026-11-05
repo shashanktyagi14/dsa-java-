@@ -1,6 +1,5 @@
 package com.shashank.dsa.linkedlist;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -44,6 +43,6 @@ class LinkedListAlgorithmsTest {
         third.next = fourth;
 
         assertSame(third, LinkedListAlgorithms.middleNode(first));
-        assertEquals(0, LinkedListAlgorithms.middleNode(null) == null ? 0 : 1);
+        assertNull(LinkedListAlgorithms.middleNode(null));
     }
 }

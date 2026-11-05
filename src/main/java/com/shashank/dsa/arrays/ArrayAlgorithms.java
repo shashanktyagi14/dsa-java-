@@ -55,7 +55,7 @@ public final class ArrayAlgorithms {
     }
 
     /**
-     * Returns exclusive prefix sums: result[i] is the sum of nums[0..i].
+     * Returns inclusive prefix sums: result[i] is the sum of nums[0..i].
      * Time: O(n); Space: O(n).
      */
     public static long[] prefixSums(int[] nums) {
