@@ -21,6 +21,8 @@ This index lists implementations that exist in source and have unit tests. A pla
 | Dynamic programming | LIS length | O(n log n) time, O(n) space |
 | Stack | Circular next-greater element | O(n) time, O(n) space |
 | Heaps | k-th largest element | O(n log k) time, O(k) space |
-| Trees | Maximum depth, level order, strict BST validation | O(n) time |
+| Trees | Maximum depth (iterative BFS) | O(n) time, O(w) space |
+| Trees | Level order traversal | O(n) time, O(n) space |
+| Trees | Strict BST validation | O(n) time, O(h) space |
 
 Run `mvn test` to execute all tests.

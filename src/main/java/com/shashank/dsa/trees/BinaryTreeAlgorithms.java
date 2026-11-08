@@ -22,18 +22,39 @@ public final class BinaryTreeAlgorithms {
 
     /**
      * Returns the number of nodes on the longest root-to-leaf path.
-     * An empty tree has depth zero.
-     * Time: O(n); Space: O(h) recursion stack, where h is tree height.
+     * An empty tree has depth zero. The input must be an acyclic binary tree.
+     * Iterative breadth-first traversal avoids recursion-depth failures on
+     * highly skewed trees.
+     * Time: O(n); Space: O(w), where w is the maximum tree width.
      */
     public static int maximumDepth(Node root) {
         if (root == null) {
             return 0;
         }
-        return 1 + Math.max(maximumDepth(root.left), maximumDepth(root.right));
+
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+        int depth = 0;
+
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                Node node = queue.remove();
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            depth++;
+        }
+        return depth;
     }
 
     /**
      * Returns the values grouped by level, from root to leaves.
+     * The input must be an acyclic binary tree.
      * Time: O(n); Space: O(n).
      */
     public static List<List<Integer>> levelOrder(Node root) {

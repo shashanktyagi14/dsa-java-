@@ -22,5 +22,9 @@ Every entry below has a corresponding source implementation and unit tests. Comp
 | Dynamic programming | Minimum coin change | O(amount × coin count) | O(amount) |
 | Dynamic programming | LIS length | O(n log n) | O(n) |
 | Stack | Circular next-greater element | O(n) | O(n) |
+| Heaps | k-th largest element | O(n log k) | O(k) |
+| Trees | Maximum depth (iterative BFS) | O(n) | O(w) |
+| Trees | Level-order traversal | O(n) | O(n) |
+| Trees | Strict BST validation | O(n) | O(h) |
 
 Run `mvn test` to execute the test suite.

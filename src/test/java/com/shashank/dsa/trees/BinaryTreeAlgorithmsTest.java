@@ -25,6 +25,20 @@ class BinaryTreeAlgorithmsTest {
     }
 
     @Test
+    void maximumDepthHandlesDeepSkewedTreesWithoutRecursion() {
+        BinaryTreeAlgorithms.Node root = new BinaryTreeAlgorithms.Node(0);
+        BinaryTreeAlgorithms.Node current = root;
+        int nodeCount = 50_000;
+
+        for (int i = 1; i < nodeCount; i++) {
+            current.right = new BinaryTreeAlgorithms.Node(i);
+            current = current.right;
+        }
+
+        assertEquals(nodeCount, BinaryTreeAlgorithms.maximumDepth(root));
+    }
+
+    @Test
     void validatesStrictBstOrderingIncludingIntegerExtremes() {
         BinaryTreeAlgorithms.Node root = new BinaryTreeAlgorithms.Node(0);
         root.left = new BinaryTreeAlgorithms.Node(Integer.MIN_VALUE);
